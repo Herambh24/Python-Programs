@@ -1,1 +1,1 @@
-This is a simple game of Rock Paper Scissors made in Python using mostly if statements and elif statements. The computer choses using the random module. And at the end the win count and the choices of both the user and the computer are displayed at the end.
+This is a simple game of Rock Paper Scissors made in Python using mostly if statements and elif statements. The computer choses its pick using the random module. At the end the win count and the choices of both the user and the computer are displayed using Lists. The game runs 5 times using the for loop.
