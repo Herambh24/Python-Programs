@@ -1,0 +1,68 @@
+import random
+
+C = 0
+U = 0
+User_Ch = []
+Computer_Ch = []
+count = {}
+
+for x in range(5):
+    Inp = input("Enter Choice Rock, Paper or Scissors: ")
+    d = random.randrange(1, 4)
+    R = ""
+
+    if d == 1:
+        R = "Rock"
+    if d == 2:
+        R = "Paper"
+    if d == 3:
+        R = "Scissors"
+    if R == "Rock" and Inp == "Rock":
+        print("Computer Chose",R)
+        print("Draw")
+        count[x + 1] = "Draw"
+    elif R == "Rock" and Inp == "Paper":
+        print("Computer Chose",R)
+        print("You win")
+        U = U + 1
+        count[x + 1] = "User"
+    elif R == "Rock" and Inp == "Scissors":
+        print("Computer Chose",R)
+        print("Computer wins")
+        C = C + 1
+        count[x + 1] = "Computer"
+    elif R == "Paper" and Inp == "Rock":
+        print("Computer Chose",R)
+        print("Computer wins")
+        C = C + 1
+        count[x + 1] = "Computer"
+    elif R == "Paper" and Inp == "Paper":
+        print("Computer Chose",R)
+        print("Draw")
+        count[x + 1] = "Draw"
+    elif R == "Paper" and Inp == "Scissors":
+        print("Computer Chose",R)
+        print("You win")
+        U = U + 1
+        count[x + 1] = "User"
+    elif R == "Scissors" and Inp == "Rock":
+        print("Computer Chose",R)
+        print("You wins")
+        U = U + 1
+        count[x + 1] = "User"
+    elif R == "Scissors" and Inp == "Paper":
+        print("Computer Chose",R)
+        print("Computer wins")
+        C = C + 1
+        count[x + 1] = "Computer"
+    elif R == "Scissors" and Inp == "Scissors":
+        print("Computer Chose",R)
+        print("Draw")
+        count[x + 1] = "Draw"
+
+    User_Ch.append(Inp)
+    Computer_Ch.append(R)
+
+print(User_Ch)
+print(Computer_Ch)
+print(count)
