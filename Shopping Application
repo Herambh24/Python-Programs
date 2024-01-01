@@ -1,0 +1,77 @@
+class Shop:
+    Shirt_count=0
+    Jacket_count=0
+    Pant_count=0
+    Belt_count=0
+    ST=0
+    JT=0
+    BT=0
+    PT=0
+    Total=0
+    Price=0
+    Dis_Tot=0
+    Item=0
+    Name=0
+    Phone=0
+    def Items(self):
+        print("Items aviable today:")
+        print("Shirt-$20")
+        print("Jacket-30$")
+        print("Pant-$25")
+        print("Belt-$15")
+        
+        for x in range(4):
+            self.Item=input("Enter your Items or Type Exit to continue: ")
+            if self.Item=="Shirt":
+                self.Shirt_count=int(input("Enter count: "))
+            elif self.Item=="Jacket":
+                self.Jacket_count=int(input("Enter count: "))
+            elif self.Item=="Pant":
+                self.Pant_count=int(input("Enter count: "))
+            elif self.Item=="Belt":
+                self.Belt_count=int(input("Enter count: "))
+            elif self.Item=="Exit":
+                break
+            else:
+                print("Retry")
+                
+       
+    def Tot(self):
+        self.ST=self.Shirt_count*20
+        self.JT=self.Jacket_count*30
+        self.PT=self.Pant_count*25
+        self.BT=self.Belt_count*15
+        self.Total=self.ST+self.JT+self.PT+self.BT
+        return self.Total
+    def Discount(self):
+        if self.Total<500:
+            print("$500 Discount applied")
+            self.Price=self.Total*.15
+            self.Dis_Tot=self.Total-self.Price
+        elif self.Total<300:
+            print("$300 Discount applied")
+            self.Price=self.Total*.1
+            self.Dis_Tot=self.Total-self.Price
+        elif self.Total<150:
+            print("$150 Discount applied")
+            self.Price=self.Total*.05
+            self.Dis_Tot=self.Total-self.Price
+        else:
+            print("No discount aviable")
+        return self.Dis_Tot
+    def Final(self):
+        self.Name=input("Enter your Name: ")
+        self.Phone=int(input("Enter your No.: "))
+        print(self.Name)
+        print(self.Phone)
+        print("Total",self.Total)
+        print("Discounted Total", self.Dis_Tot)
+        
+S=Shop()
+S.Items()
+b=S.Tot()
+c=S.Discount()
+d=S.Final()
+print(b)
+print(c)
+print(d)
