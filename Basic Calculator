@@ -1,0 +1,40 @@
+def add(x,y):
+    a=x+y
+    return a
+
+def sub(x,y):
+    s=x-y
+    return s
+    
+def mul(x,y):
+    m=x*y
+    return m
+    
+def Di(x,y):
+    c=x/y
+    return c
+
+Task=input('Add, Subtract, Multiply or Divide?: ')
+
+if Task=='Add':
+    x=int(input("Enter no.: "))
+    y=int(input("Enter no.: "))
+    ad=add(x,y)
+    print(ad)
+elif Task=='Subtract':
+    x=int(input("Enter no.: "))
+    y=int(input("Enter no.: "))
+    su=sub(x,y)
+    print(su)
+elif Task=='Multiply':
+    x=int(input("Enter no.: "))
+    y=int(input("Enter no.: "))
+    mu=mul(x,y)
+    print(mu)
+elif Task=='Divide':
+    x=int(input("Enter no.: "))
+    y=int(input("Enter no.: "))
+    di=Di(x,y)
+    print(Di)
+else:
+    print("Retry")
