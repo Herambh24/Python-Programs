@@ -1,0 +1,42 @@
+import time
+import random
+print("Game: Hangman")
+time.sleep(1.3)
+print("How to play:")
+time.sleep(1.3)
+print("Try to guess the word chosen by the computer and enter letters that Could be in that word. ")
+time.sleep(1.3)
+print("Letter count in that word will be told while guessing.")
+time.sleep(1.3)
+print("If the letter you entered is not in the word you will trigger the hanging process.")
+time.sleep(1.3)
+print("If you guess 9 times incorrectly you will lose the game.")
+time.sleep(1.3)
+print("But, if you are sure that you know the word you may make an Ultimate guess to risk your chances in one shot.")
+time.sleep(1.3)
+print("If you guess it right you win if you don't you lose.")
+time.sleep(1.3)
+
+List=["height","crate","value","wolves","subway","rhythm","train","house","python"]
+W=random.choice(List)
+
+Count=len(W)
+print("The word has",Count,"letters in it.")
+time.sleep(13)
+print("While guessing use only small caps")
+
+for x in range(8):
+    Guess=input("Enter your guess or type 'Guess' for Ultimate guess: ")
+    if Guess in W:
+        print("The letter you guessed is in",W.find(Guess),"place. FYI 0 is the 1st letter")
+    elif Guess=="Guess":
+        FG=input("Enter your Ultimate guess(All small caps): ")
+        if FG==W:
+            print("YOU WIN!!")
+            break
+        else:
+            print("YOU LOSE!!")
+            break
+    else:
+        print("Retry!!")
+
