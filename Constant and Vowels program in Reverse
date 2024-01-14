@@ -1,0 +1,12 @@
+c=[]
+v=[]
+for x in range(10):
+    n=input("Enter alphabet in small caps: ")
+    if n=='a' or n=='e' or n=='i' or n=='o' or n=='u':
+        v.append(n)
+    else:
+        c.append(n)
+    
+print(str(c)[::-1])
+print(str(v)[::-1])
+
